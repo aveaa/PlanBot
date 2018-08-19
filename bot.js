@@ -6,7 +6,9 @@ bot.commands = new Discord.Collection();
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online`);
 });
-
+bot.on('message', message => {
+    const args = message.content.slice(p.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
 if (message.content.startsWith(prefix + `eval`) && message.author.id === "406343162651738112" || message.author.id === "361951318929309707") {
 		const code = message.content.split(" ").slice(1).join(" ");
         try {
