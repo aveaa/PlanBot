@@ -53,6 +53,5 @@ bot.on("message", async message => {
         return message.channel.send("hello!");
     }
 
-});
-
+})});
 bot.login(process.env.BOT_TOKEN);
